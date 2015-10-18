@@ -121,7 +121,7 @@ Create a line plot showing the average steps for each time interval.
 ```r
 qplot(interval_steps.df$interval,interval_steps.df$steps, geom="line", 
       main = "Average Daily Steps Taken by 5-Minute Interval",
-      xlab = "5 Minute Interval", ylab = "Average Number of Steps",
+      xlab = "Time in 5 Minute Intervals", ylab = "Average Number of Steps",
       color=I("sky blue"), size=I(1))+theme_bw()
 ```
 
@@ -256,7 +256,7 @@ interval_steps.day_category.df <- aggregate(steps ~ interval + day_category,    
 ggplot(interval_steps.day_category.df, aes(x=interval, y=steps)) + 
         geom_line(color=I("sky blue")) + 
         facet_wrap(~ day_category, nrow=2, ncol=1) +
-        labs(x="5 Minute Interval", y="Average Number of Steps") +
+        labs(x="Time in 5 Minute Intervals", y="Average Number of Steps") +
         theme_bw()
 ```
 
